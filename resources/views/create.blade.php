@@ -14,6 +14,7 @@
 
         <input type= "submit">
     </form>
+    <a href="{{ route('index')}}">Voltar</a>
 </body>
 </html>
 
