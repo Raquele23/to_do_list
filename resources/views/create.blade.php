@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adicionar tarefa</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
-    <h1>Adicione uma tarefa</h1>
-    <form action="{{route('store')}}" method="post">
-        @csrf
-        <label for="task">Nome da tarefa</label>
-        <input type="text" name="task" id="task">
+    <div class="header">
+        <h1>Adicionar tarefa</h1>
+    </div>
 
-        <input type= "submit">
-    </form>
-    <a href="{{ route('index')}}">Voltar</a>
+    <div class="container">
+        <form action="{{route('store')}}" method="post" class="form-task">
+            @csrf
+            <label for="task" class="form-label">Nome da tarefa</label>
+            <input type="text" name="task" id="task" class="form-input">
+
+            <input type= "submit" value="Salvar" class="btn add-btn">
+        </form>
+    </div>
+
+    <a href="{{ route('index')}}" class="btn add-btn">Voltar</a>
 </body>
 </html>
 

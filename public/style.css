@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #fceabb 0%, #f8b500 100%);
+  color: #4a3f35;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================================
+   🔹 CABEÇALHO
+   ================================ */
+.header {
+  width: 100%;
+  background: #f8b500;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 650;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+   🔹 CONTAINER
+   ================================ */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* ================================
+   🔹 LISTA DE TAREFAS
+   ================================ */
+.task-list {
+  list-style: none;
+  width: 100%;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff2cc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 500px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease;
+  font-size: 17px;
+}
+
+/* ================================
+   🔹 TEXTO
+   ================================ */
+.task-text {
+  font-size: 15px;
+  flex: 1;
+  word-break: break-word;
+}
+
+/* ================================
+   🔹 BOTÕES
+   ================================ */
+.task-actions {
+  display: flex;
+  align-items: center
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 8px;
+}
+
+.edit-btn {
+  background-color: #ffd54f;
+  color: #4a3f35;
+  text-decoration: none;
+}
+
+.edit-btn:hover {
+  background-color: #ffca28;
+}
+
+.delete-btn {
+  background-color: #ff7043;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #f4511e;
+}
+
+/* ================================
+   🔹 BOTÃO NOVA TAREFA
+   ================================ */
+.add-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color:  #ffb300;
+  font-size: 18px;
+  color: #4a3f35;
+  font-weight: 600;
+  padding: 10px 50px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.add-btn:hover {
+  background-color: #f1b529;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   🔹 FORM DELETAR INLINE
+   ================================ */
+.inline-form {
+  display: inline;
+}
+
+/* ================================
+   🔹 FORMULÁRIOS (CREATE / EDIT)
+   ================================ */
+.form-task {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff2cc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #4a3f35;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 400px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ffb300;
+  box-shadow: 0 0 5px rgba(255, 179, 0, 0.4);
+}

@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar tarefa</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
-    <h1>Editar tarefa</h1>
-    <form action="{{route('update', $task->id)}}" method="post">
-        @method("put")
-        @csrf
-        <label for="task">Nome da tarefa</label>
-        <input type="text" name="task" id="task" value="{{$task->task}}">
+    <div class="header">
+        <h1>Editar tarefa</h1>
+    </div>
 
-        <input type= "submit">
-    </form>
+    <div class="container">
+        <form action="{{route('update', $task->id)}}" method="post" class="form-task">
+            @method("put")
+            @csrf
+            <label for="task" class="form-label">Nome da tarefa</label>
+            <input type="text" name="task" id="task" value="{{$task->task}}" class="form-input">
 
-    <a href="{{ route('index')}}">Voltar</a>
+            <input type= "submit" value="Atualizar" class="btn add-btn">
+        </form>
+    </div>
+
+    <a href="{{ route('index')}}" class="btn add-btn">Voltar</a>
+    
 </body>
 </html>
